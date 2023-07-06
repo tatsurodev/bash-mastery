@@ -1,5 +1,16 @@
 #!/bin/bash
 
+# scriptにはauthor, created date, updated date, description, usageをcommentに書くとよい
+# Author: tatsurodev
+# Date Created: 06/07/2023
+# Last Modified: 06/07/2023
+
+# Description
+# Prints "This is my first script" to the terminal
+
+# Usage
+# our_first_script
+
 # scriptは3つのパートからなる。 beginning(shebang, #hash !bang), middle(commands), end(exit statement)
 # shebangは1行目に書き、2行目は改行。#!の後はscriptのexecute pathを指定。
 # pythonの場合のshebang #!/usr/bin/python3
