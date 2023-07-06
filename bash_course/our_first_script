@@ -19,6 +19,11 @@
 
 # scriptの実行方法
 # touch等で作成した時のdefault permissionは644で実行権限がないので、chmod +x script_nameで実行権限付与。
+# よく使用するpermission
+# https://chmod-calculator.com/
+# 744: ownerが全権限を持ち、他のuserは読み取りができる。
+# 755: ownerが全権限を持ち、他のuserは書き込み以外の読み取り、実行ができる。
+# permissionで実行権限のみ(1)与えても実際には実行できないので、実行と読み取りの両方(5)があって初めて実行も可能になる。
 # ./script_name: 現在のshellで実行。実行権限がないと./script_nameで現在のshellで実行しようとした時にerrorとなるので注意。
 # sh script_name: 別のshellで実行。
 
