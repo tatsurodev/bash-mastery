@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# scriptは3つのパートからなる。 beginning(shebang, #hash !bang), middle(commands), end(exit statement)
+# shebangは1行目に書き、2行目は改行。#!の後はscriptのexecute pathを指定。
+# pythonの場合のshebang #!/usr/bin/python3
+
+# file script_nameでshellが何のscriptと判別しているかが分かる
+
+# scriptの実行方法
+# touch等で作成した時のdefault permissionは644で実行権限がないので、chmod +x script_nameで実行権限付与。
+# ./script_name: 現在のshellで実行。実行権限がないと./script_nameで現在のshellで実行しようとした時にerrorとなるので注意。
+# sh script_name: 別のshellで実行。
+
+echo "This is my first script"
+
+# exit codeは、0から255まであり、0が成功、0以外が失敗。失敗は一般的には1を使用。
+# https://tldp.org/LDP/abs/html/exitcodes.html
+exit 0
