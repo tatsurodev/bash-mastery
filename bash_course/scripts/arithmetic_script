@@ -15,3 +15,11 @@ echo $(( 4 % 2 ))
 echo $(( 5 % 3 ))
 echo $(( 2.5 + 1 )) # invalid arithmetic operator
 echo $(( 5 / 2 )) # 2
+# basic calculation
+# "scale=number; expression" | bc => scaleを省略すると小数点0桁表示
+echo "5/2" | bc # 2, scaleを省略すると0扱い
+echo "scale=2; 5/2" | bc # 2.50, scaleで小数点指定、expression; scale=numberは不可
+echo "scale=10; 5/2" | bc # 2.5000000000
+# べき乗はbcでは^を使用, **は不可
+echo "2 ** 10" | bc # bad expression
+echo "2 ^ 10" | bc
