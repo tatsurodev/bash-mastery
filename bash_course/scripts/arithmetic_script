@@ -23,3 +23,11 @@ echo "scale=10; 5/2" | bc # 2.5000000000
 # べき乗はbcでは^を使用, **は不可
 echo "2 ** 10" | bc # bad expression
 echo "2 ^ 10" | bc
+# tilda expansion(チルダ展開)
+echo ~ # $HOME
+echo ~root # /root, root userが有効なuserであるときそのhome dirctoryを返す
+echo ~abcd # ~abcd, 有効なuser出ない時は文字列として処理
+echo $PWD # shell variable, current dir
+echo $OLDPWD # 1つ前のdir
+echo ~+ # $PWD
+echo ~- # $OLDPWD
