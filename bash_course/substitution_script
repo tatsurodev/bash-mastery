@@ -1,0 +1,4 @@
+#!/bin/bash
+# command substitution: $(command)
+time=$(date +%H:%M:%S) # date +format
+echo "Hello $USER, the time right now is $time"
