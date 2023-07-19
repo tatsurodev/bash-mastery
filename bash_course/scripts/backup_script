@@ -2,13 +2,19 @@
 
 # Author: tatsurodev
 # Date Created: 06/07/2023
-# Last Modified: 06/07/2023
+# Last Modified: 19/07/2023
 
 # Description:
-# Creates a backup in ~/bash_course folder of all files in the home directory
+# Creates a backup in the users current directory of all files in the home directory
 
 # Usage:
 # backup_script
 
-tar -cvf ~/bash_course/my_backup_"$(date +%d-%m-%Y_%H-%M-%S)".tar ~/* 2>/dev/null
+echo "Hello, ${USER^}"
+echo "I will now back up your home directory, $HOME"
+currentdir=$(pwd)
+echo "You are running this script from $currentdir"
+echo "Therefore, I will save the backup in $currentdir"
+tar -cf $currentdir/my_backup_"$(date +%d-%m-%Y_%H-%M-%S)".tar $HOME/* 2>/dev/null
+echo "Backup Completed Successfully."
 exit 0
