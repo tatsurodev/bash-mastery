@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# arithmetic expension(算術式展開): $(( expression )), 整数のみ対応、小数を含んだ計算はbc(basic calculation)を使用
+x=4
+y=2
+echo $(( $x + $y ))
+echo $(( x + y ))
+echo $(( x - y ))
+echo $(( x / y ))
+echo $(( x * y ))
+echo $(( 2 + 3 * 4 ))
+echo $(( (2 + 3) * 4 ))
+echo $(( 4 ** 2 ))
+echo $(( 4 % 2 ))
+echo $(( 5 % 3 ))
+echo $(( 2.5 + 1 )) # invalid arithmetic operator
+echo $(( 5 / 2 )) # 2
