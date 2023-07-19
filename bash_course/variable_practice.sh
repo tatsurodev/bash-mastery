@@ -11,3 +11,18 @@ echo "Keep up the good work, ${employee}"
 
 echo "Best wishes,"
 echo "Karen, CEO"
+
+# advanced parameter expansion: $paramと違い、${param}を使うとformatを指定できる
+name=ZiYaD
+echo ${name,} # 最初の文字をlowercaseに
+echo ${name,,} # 全文字lowercaseに
+echo ${USER^} # 最初の文字をuppercaseに
+echo ${USER^^} # 全文字をuppercaseに
+echo ${#name} # 文字数
+number=0123456789
+# substring expansion, slicing: ${parameter:offset:length}
+echo ${number:0:7} # 01234456, index 0から7つ
+echo ${number:3} # 3456789, index 3から最後まで
+echo ${number:3:} # (empty string), offsetの後に:のみつけると0が省略されてると解釈されるので注意
+echo ${number: -3:2} # 78, 後ろから数えてsliceしたい時はoffsetをspaceと-でindex指定
+echo ${number: -3} # 789
