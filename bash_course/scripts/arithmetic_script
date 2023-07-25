@@ -31,3 +31,23 @@ echo $PWD # shell variable, current dir
 echo $OLDPWD # 1つ前のdir
 echo ~+ # $PWD
 echo ~- # $OLDPWD
+# brace expansion(ブレース展開)
+# string list, {}の中にspaceを入れると機能しないので注意
+echo {a,19,z,barry,42} # a 19 z barry 42
+echo {jan,feb,mar,apr,may,jun} # jan feb mar apr may jun
+# fail
+echo {jan,feb,mar,apr,may, jun} # {jan,feb,mar,apr,may, jun}
+echo { jan,feb,mar,apr,may,jun} # { jan,feb,mar,apr,may,jun}
+# range list
+echo {1,2,3,4,5,6,7,8,9,10} # 1 2 3 4 5 6 7 8 9 10
+echo {1..10} # 1 2 3 4 5 6 7 8 9 10
+echo {10..1} # 10 9 8 7 6 5 4 3 2 1
+echo {a..z} # a b c d e f g h i j k l m n o p q r s t u v w x y z
+echo {1..1000..3} # {start..end..step}
+# fail
+echo {1..q} # {1..q}
+echo {jan..dec} # {jan..dec}
+# journal folder以下に月folder/日付file作成
+echo month{1..12}
+echo month{01..12} # mkdir month{01..12}
+echo month{01..12}/day{01..31}.txt # touch month{01..12}/day{01..31}.txt
