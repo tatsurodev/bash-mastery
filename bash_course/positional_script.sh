@@ -11,3 +11,7 @@ echo "The 10th argument is ${10}"
 # curly braceを使用していないので$11が$1と1に分解されてしまうので注意
 # ./positional_script.sh a b c d e fg h i j k
 echo "The 11th argument is $11" # The 11th argument is a1
+
+# special parameters
+# $#でcommand引数の数
+echo $#
